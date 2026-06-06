@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAI · Type System — Approval Sheet v1.0</title>
+<link rel="stylesheet" href="https://use.typekit.net/bkf2hdc.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;500;600;700&family=Jaini+Purva&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Sora:wght@300;400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--shweta:#fff;--krishna:#141414;--kanchan:#C9A84C;--neel:#1B3A6B;--soft:#faf8f3;--rule:#e6e1d6;--muted:#5a544a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--shweta);color:var(--krishna);font-family:'Sora',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:56px 46px 90px}
+.jaini{font-family:'Jaini Purva',serif}.inknut{font-family:'Inknut Antiqua',serif}.spectral{font-family:'Spectral',serif}
+.lora{font-family:'Lora',serif}.sora{font-family:'Sora',sans-serif}.lino{font-family:'linotype-devanagari','Mukta',sans-serif}
+.gold{color:var(--kanchan)}
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--neel);padding-bottom:16px}
+.mast .om{font-family:'Jaini Purva',serif;color:var(--kanchan);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:'Spectral',serif;font-size:34px;font-weight:600;letter-spacing:-.5px;line-height:1}
+.mast .meta{text-align:right;font-size:11px;letter-spacing:1px;color:var(--muted);line-height:1.8}
+.mast .status{display:inline-block;background:var(--kanchan);color:#000;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px}
+/* glance table */
+.glance{width:100%;border-collapse:collapse;margin-top:26px;font-size:13px}
+.glance th{text-align:left;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--neel);font-weight:700;border-bottom:1px solid var(--rule);padding:8px 10px}
+.glance td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.glance td b{font-weight:600}
+.glance .src{color:var(--muted);font-size:12px}
+/* sections */
+.sec{margin-top:46px;padding-top:14px}
+.sh{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--neel);padding-bottom:9px;margin-bottom:18px}
+.sh .t{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--neel)}
+.sh .n{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}
+.row{padding:13px 0;border-bottom:1px solid var(--rule)}
+.lab{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#a59b88;font-weight:600;margin-bottom:6px}
+.nmrow{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}.nm{font-size:16px;font-weight:600}.role{font-size:12px;color:var(--muted);font-weight:300}
+.disp{line-height:1.34}.bd{font-size:16px;line-height:1.6;max-width:740px;color:#2c2c2c}
+.weights span{display:block;margin:3px 0;line-height:1.2}
+.hero{text-align:center;padding:12px 0}
+.hero .om{font-family:'Jaini Purva',serif;color:var(--kanchan);font-size:clamp(40px,7vw,84px);line-height:1.3}
+.hero .en{font-family:'Spectral',serif;font-size:clamp(20px,2.6vw,30px);margin-top:12px}
+.hero .hi{font-size:clamp(16px,2vw,22px);color:var(--muted);margin-top:8px}
+/* governance + notes + signoff */
+.foot{margin-top:46px;padding-top:20px;border-top:2px solid var(--neel);font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
+.foot b{color:var(--krishna);font-weight:600}
+.sw{display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:12px}.chip{width:14px;height:14px;border:1px solid var(--rule);display:inline-block}
+.callout{background:var(--soft);border:1px solid var(--rule);border-left:3px solid var(--kanchan);padding:16px 20px;margin-top:20px;font-size:13px;line-height:1.6;color:#3a352c}
+.signoff{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.signoff .box{border:1px solid var(--rule);padding:18px}
+.signoff .k{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--neel);font-weight:700;margin-bottom:24px}
+.signoff .line{border-bottom:1px solid var(--krishna);height:1px;margin-bottom:8px}
+.signoff .sub{font-size:11px;color:var(--muted)}
+.check{margin-top:10px;font-size:13px}
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{padding:24px}}
+</style></head><body><div class="wrap">
+
+<div class="mast">
+  <div><div class="om">ॐ RAI · Revolutionary Absolute Intelligence</div><h1>Type System — Approval Sheet</h1></div>
+  <div class="meta"><div>Version 1.0</div><div>Prepared for sign-off</div><div style="margin-top:6px"><span class="status">For Approval</span></div></div>
+</div>
+
+<table class="glance">
+  <tr><th>Tier</th><th>Role</th><th>Typeface</th><th>Source</th></tr>
+  <tr><td><b>Sacred · display</b></td><td>ॐ, mantra titles (gold)</td><td>Jaini Purva</td><td class="src">Google Fonts · OFL · free</td></tr>
+  <tr><td><b>Sacred · text</b></td><td>Verses, running sacred Devanagari (gold)</td><td>Inknut Antiqua</td><td class="src">Google Fonts · OFL · free</td></tr>
+  <tr><td><b>Hindi</b></td><td>Everyday Indian-language voice</td><td>Linotype Devanagari</td><td class="src">Adobe Fonts · licensed (kit)</td></tr>
+  <tr><td><b>English · editorial</b></td><td>Headlines &amp; voice</td><td>Spectral</td><td class="src">Google Fonts · OFL · free</td></tr>
+  <tr><td><b>English · body</b></td><td>Long-form reading</td><td>Lora</td><td class="src">Google Fonts · OFL · free</td></tr>
+  <tr><td><b>English · UI</b></td><td>Interface, data, functional</td><td>Sora</td><td class="src">Google Fonts · OFL · free</td></tr>
+</table>
+
+<div class="sec"><div class="sh"><span class="t">In concert</span></div>
+  <div class="hero">
+    <div class="om">ॐ नमः शिवाय</div>
+    <div class="en">The Conscious Intelligence</div>
+    <div class="hi lino">चेतना को विस्तार देने वाली तकनीक।</div>
+  </div>
+</div>
+
+<div class="sec"><div class="sh"><span class="t">Sacred · Devanagari · gold</span><span class="n">Jaini Purva + Inknut Antiqua</span></div>
+  <div class="row"><div class="nmrow"><span class="nm">Jaini Purva</span><span class="role">— sacred display</span></div>
+    <div class="lab">Display</div><div class="disp jaini gold" style="font-size:62px">ॐ नमः शिवाय</div>
+    <div class="lab" style="margin-top:10px">Title</div><div class="jaini gold" style="font-size:36px">श्री गणेशाय नमः</div></div>
+  <div class="row"><div class="nmrow"><span class="nm">Inknut Antiqua</span><span class="role">— sacred running text</span></div>
+    <div class="lab">Verse 30</div><div class="inknut gold" style="font-size:30px">ॐ सर्वे भवन्तु सुखिनः</div>
+    <div class="lab" style="margin-top:10px">Body 18</div><div class="bd inknut gold" style="font-size:18px">सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥</div></div>
+</div>
+
+<div class="sec"><div class="sh"><span class="t">Hindi · Linotype Devanagari</span><span class="n">via Adobe kit</span></div>
+  <div class="row">
+    <div class="lab">Display 52</div><div class="disp lino" style="font-size:52px;font-weight:600">चेतना-प्रथम प्रौद्योगिकी</div>
+    <div class="lab" style="margin-top:12px">Headline 32</div><div class="lino" style="font-size:32px;font-weight:500">सत्य · अहिंसा · अस्तेय · अपरिग्रह</div>
+    <div class="lab" style="margin-top:12px">Body 17</div><div class="bd lino" style="font-size:17px">राय एक चेतना-प्रथम तकनीक कंपनी है। हमारा उद्देश्य मानव क्षमता का विस्तार करना है — प्रतिस्थापन नहीं। हम ब्रह्मांडीय क्रम (ऋत) के भीतर नवाचार करते हैं।</div>
+    <div class="lab" style="margin-top:14px">Weights · 300 / 400 / 500 / 700 / 900</div>
+    <div class="weights lino">
+      <span style="font-weight:300;font-size:26px">राय · चेतना — Light 300</span>
+      <span style="font-weight:400;font-size:26px">राय · चेतना — Regular 400</span>
+      <span style="font-weight:500;font-size:26px">राय · चेतना — Medium 500</span>
+      <span style="font-weight:700;font-size:26px">राय · चेतना — Bold 700</span>
+      <span style="font-weight:900;font-size:26px">राय · चेतना — Black 900</span>
+    </div>
+  </div>
+</div>
+
+<div class="sec"><div class="sh"><span class="t">English · three roles</span><span class="n">Spectral · Lora · Sora</span></div>
+  <div class="row"><div class="nmrow"><span class="nm spectral">Spectral</span><span class="role">— editorial serif · headlines</span></div>
+    <div class="disp spectral" style="font-size:40px;font-weight:600">The Conscious Intelligence</div>
+    <div class="spectral" style="font-size:24px;font-style:italic;color:var(--muted);margin-top:6px">Innovation within cosmic order.</div></div>
+  <div class="row"><div class="nmrow"><span class="nm lora">Lora</span><span class="role">— body serif · long-form reading</span></div>
+    <div class="bd lora" style="font-size:17px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. Every product answers one question: does this honour natural intelligence? We design within ṛta, the cosmic order, not against it.</div></div>
+  <div class="row"><div class="nmrow"><span class="nm sora">Sora</span><span class="role">— modern sans · UI &amp; data</span></div>
+    <div class="disp sora" style="font-size:28px;font-weight:600">Revolutionary Absolute Intelligence</div>
+    <div class="bd sora" style="font-weight:300;font-size:15px;margin-top:4px">Interface · captions · tabular figures — 0123456789</div></div>
+</div>
+
+<div class="foot">
+  <b>Colour governance:</b> ~70% Param Shweta (white) · Gahan Krishna (black) text · Surya Kanchan gold ≤15%, <b>sacred only</b> · Akasha Neel navy accent.
+  <div style="margin-top:10px">
+    <span class="sw"><span class="chip" style="background:#fff"></span>#FFFFFF</span>
+    <span class="sw"><span class="chip" style="background:#141414"></span>#000000</span>
+    <span class="sw"><span class="chip" style="background:#C9A84C"></span>#C9A84C</span>
+    <span class="sw"><span class="chip" style="background:#1B3A6B"></span>#1B3A6B</span>
+  </div>
+  <div class="callout"><b>Rendering note —</b> the Hindi tier (Linotype Devanagari) loads via the Adobe Fonts kit and renders true Linotype on any domain authorized in your Adobe project. On unauthorized contexts it falls back to Mukta automatically. All other faces are free Google Fonts and render everywhere.</div>
+</div>
+
+<div class="signoff">
+  <div class="box"><div class="k">Approved by</div><div class="line"></div><div class="sub">Name &amp; role</div><div class="check">☐ Approved &nbsp;&nbsp; ☐ Approved with changes &nbsp;&nbsp; ☐ Rejected</div></div>
+  <div class="box"><div class="k">Date</div><div class="line"></div><div class="sub">DD / MM / YYYY</div><div class="check" style="color:var(--muted)">Notes: ____________________________</div></div>
+</div>
+
+</div></body></html>
