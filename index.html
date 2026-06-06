@@ -1,99 +1,155 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RAI · Type System — Review &amp; Approval</title>
+<title>RAI · Type Specimen — Weights &amp; Sizes</title>
 <link rel="stylesheet" href="https://use.typekit.net/bkf2hdc.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Forum&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=GFS+Didot&family=Goudy+Bookletter+1911&family=Jaini+Purva&family=Libre+Caslon+Text:wght@400;700&family=Mukta:wght@300;400;500;600;700&family=Sedan&family=Sora:wght@300;400;500;600;700&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Jaini+Purva&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Mukta:wght@300;400;500;600;700&family=Sora:wght@200;300;400;500;600;700;800&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--shweta:#fff;--krishna:#141414;--kanchan:#C9A84C;--neel:#1B3A6B;--soft:#faf8f3;--rule:#e6e1d6;--muted:#5a544a}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--shweta);color:var(--krishna);font-family:'Sora',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1020px;margin:0 auto;padding:54px 46px 96px}
+body{background:var(--shweta);color:var(--krishna);font-family:'Sora',sans-serif;line-height:1.4;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:54px 48px 100px}
 .jaini{font-family:'Jaini Purva',serif}.lino{font-family:'linotype-devanagari','Mukta',sans-serif}
-.cormorant{font-family:'Cormorant Garamond',serif}.didot{font-family:'GFS Didot',serif}.forum{font-family:'Forum',serif}
-.fraunces{font-family:'Fraunces',serif}.caslon{font-family:'Libre Caslon Text',serif}.goudy{font-family:'Goudy Bookletter 1911',serif}
-.sedan{font-family:'Sedan',serif}.spectral{font-family:'Spectral',serif}.sora{font-family:'Sora',sans-serif}
+.cormorant{font-family:'Cormorant Garamond',serif}.caslon{font-family:'Libre Caslon Text',serif}.sora{font-family:'Sora',sans-serif}.spectral{font-family:'Spectral',serif}.fraunces{font-family:'Fraunces',serif}
 .gold{color:var(--kanchan)}
-.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--neel);padding-bottom:16px}
+.mast{border-bottom:3px solid var(--neel);padding-bottom:16px;margin-bottom:8px}
 .mast .om{font-family:'Jaini Purva',serif;color:var(--kanchan);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
-.mast h1{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;letter-spacing:-.3px;line-height:1}
-.mast .meta{text-align:right;font-size:11px;letter-spacing:1px;color:var(--muted);line-height:1.8}
-.mast .status{display:inline-block;background:var(--kanchan);color:#000;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px}
-.sec{margin-top:48px}
-.sh{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--neel);padding-bottom:9px;margin-bottom:18px}
-.sh .t{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--neel)}
-.sh .n{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}
-.lk{display:inline-block;background:var(--neel);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;padding:2px 7px;margin-left:8px;vertical-align:middle}
-.locked{background:var(--soft);border:1px solid var(--rule);padding:24px 26px;display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:center}
-.locked .cap{font-size:11px;letter-spacing:1px;color:var(--muted);margin-top:6px;text-align:center}
-.cand{padding:18px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:start}
-.cand input{width:18px;height:18px;margin-top:6px;accent-color:var(--neel)}
-.cand .nmrow{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
-.cand .nm{font-size:16px;font-weight:600}
-.cand .note{font-size:12px;color:var(--muted);font-weight:300}
-.disp{line-height:1.3}.bd{font-size:15px;line-height:1.55;color:#333;max-width:720px;margin-top:4px}
-.foot{margin-top:46px;padding-top:20px;border-top:2px solid var(--neel);font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
-.foot b{color:var(--krishna);font-weight:600}
-.callout{background:var(--soft);border-left:3px solid var(--kanchan);padding:14px 18px;margin-top:8px;font-size:13px;line-height:1.6;color:#3a352c}
-.signoff{margin-top:26px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-.signoff .box{border:1px solid var(--rule);padding:16px}
-.signoff .k{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--neel);font-weight:700;margin-bottom:22px}
-.signoff .line{border-bottom:1px solid var(--krishna);height:1px}
-@media(max-width:760px){.signoff{grid-template-columns:1fr}.locked{gap:24px}}
+.mast h1{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;letter-spacing:-.3px;line-height:1}
+.mast .sub{font-size:13px;color:var(--muted);margin-top:8px}
+.font{margin-top:50px;padding-top:18px;border-top:2px solid var(--neel)}
+.fhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.fhead .nm{font-size:22px;font-weight:600}
+.fhead .role{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--neel);font-weight:700}
+.fhead .meta{margin-left:auto;font-size:12px;color:var(--muted)}
+.block-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#a59b88;font-weight:600;margin:18px 0 8px}
+.wt{display:flex;align-items:baseline;gap:14px;padding:5px 0;border-bottom:1px solid var(--rule)}
+.wt .tag{font-family:'Sora';font-size:11px;color:var(--muted);width:140px;flex:none;font-weight:400}
+.wt .smp{font-size:26px;line-height:1.2}
+.sz{padding:3px 0}
+.para{max-width:760px;color:#2c2c2c;margin-top:6px}
+.note{font-size:12px;color:var(--muted);font-style:italic;margin-top:6px}
+.callout{background:var(--soft);border-left:3px solid var(--kanchan);padding:12px 16px;margin:30px 0 0;font-size:12.5px;line-height:1.6;color:#3a352c}
 </style></head><body><div class="wrap">
 
 <div class="mast">
-  <div><div class="om">ॐ RAI · Revolutionary Absolute Intelligence</div><h1>Type System — Review &amp; Approval</h1></div>
-  <div class="meta"><div>Version 1.0</div><div>English — to finalise</div><div style="margin-top:6px"><span class="status">For Review</span></div></div>
+  <div class="om">ॐ RAI · Revolutionary Absolute Intelligence</div>
+  <h1>Type Specimen — Weights &amp; Sizes</h1>
+  <div class="sub">Sacred + Hindi (final) and the English candidates under review. One English face will be chosen.</div>
 </div>
 
-<!-- DEVANAGARI / SACRED -->
-<div class="sec"><div class="sh"><span class="t">Devanagari · Sacred</span><span class="n">final</span></div>
-  <div class="locked">
-    <div><div class="jaini gold" style="font-size:60px;line-height:1.3">ॐ नमः शिवाय</div><div class="cap"><b>Jaini Purva</b> · gold · mantras &amp; sacred display<span class="lk">done</span></div></div>
-  </div>
-</div>
+<!-- JAINI PURVA -->
+<section class="font">
+  <div class="fhead"><span class="nm jaini" style="font-size:30px">Jaini Purva</span><span class="role">Sacred · Devanagari · gold</span><span class="meta">single weight · final</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz jaini gold" style="font-size:72px">ॐ नमः शिवाय</div>
+  <div class="sz jaini gold" style="font-size:48px">ॐ नमः शिवाय</div>
+  <div class="sz jaini gold" style="font-size:32px">श्री गणेशाय नमः</div>
+  <div class="sz jaini gold" style="font-size:24px">ॐ सर्वे भवन्तु सुखिनः</div>
+  <div class="note">Mantras &amp; sacred display only · always gold.</div>
+</section>
 
-<!-- HINDI -->
-<div class="sec"><div class="sh"><span class="t">Hindi</span><span class="n">final</span></div>
-  <div class="locked">
-    <div style="width:100%">
-      <div class="lino" style="font-size:50px;font-weight:600;text-align:center">चेतना-प्रथम प्रौद्योगिकी</div>
-      <div class="lino" style="font-size:19px;text-align:center;margin-top:8px;color:#333">राय एक चेतना-प्रथम तकनीक कंपनी है। हमारा उद्देश्य मानव क्षमता का विस्तार करना है।</div>
-      <div class="cap"><b>Linotype Devanagari</b> · Adobe kit<span class="lk">done</span></div>
-    </div>
-  </div>
-</div>
+<!-- LINOTYPE DEVANAGARI -->
+<section class="font">
+  <div class="fhead"><span class="nm lino" style="font-size:30px">Linotype Devanagari</span><span class="role">Hindi · final</span><span class="meta">weights 300–900 · Adobe kit</span></div>
+  <div class="block-label">Weights</div>
+  <div class="wt"><span class="tag">Light 300</span><span class="smp lino" style="font-weight:300">चेतना-प्रथम प्रौद्योगिकी</span></div>
+  <div class="wt"><span class="tag">Regular 400</span><span class="smp lino" style="font-weight:400">चेतना-प्रथम प्रौद्योगिकी</span></div>
+  <div class="wt"><span class="tag">Medium 500</span><span class="smp lino" style="font-weight:500">चेतना-प्रथम प्रौद्योगिकी</span></div>
+  <div class="wt"><span class="tag">Bold 700</span><span class="smp lino" style="font-weight:700">चेतना-प्रथम प्रौद्योगिकी</span></div>
+  <div class="wt"><span class="tag">Black 900</span><span class="smp lino" style="font-weight:900">चेतना-प्रथम प्रौद्योगिकी</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz lino" style="font-size:54px;font-weight:600">चेतना-प्रथम प्रौद्योगिकी</div>
+  <div class="sz lino" style="font-size:32px;font-weight:500">सत्य · अहिंसा · अस्तेय · अपरिग्रह</div>
+  <div class="para lino" style="font-size:18px">राय एक चेतना-प्रथम तकनीक कंपनी है। हमारा उद्देश्य मानव क्षमता का विस्तार करना है — प्रतिस्थापन नहीं।</div>
+</section>
 
-<!-- ENGLISH (flat list, all candidates) -->
-<div class="sec"><div class="sh"><span class="t">English</span><span class="n">tick the face(s) you approve</span></div>
+<div class="font"><div class="fhead"><span class="role" style="font-size:13px">English — candidates for review (choose one)</span></div></div>
 
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Spectral</span><span class="note">transitional serif</span></div><div class="disp spectral" style="font-size:42px;font-weight:600">The Conscious Intelligence</div><div class="bd spectral">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
+<!-- CORMORANT GARAMOND -->
+<section class="font" style="border-top:1px solid var(--rule);margin-top:18px;padding-top:14px">
+  <div class="fhead"><span class="nm cormorant" style="font-size:32px;font-weight:600">Cormorant Garamond</span><span class="meta">300–700 + italic</span></div>
+  <div class="block-label">Weights</div>
+  <div class="wt"><span class="tag">Light 300</span><span class="smp cormorant" style="font-weight:300">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Regular 400</span><span class="smp cormorant" style="font-weight:400">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Medium 500</span><span class="smp cormorant" style="font-weight:500">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">SemiBold 600</span><span class="smp cormorant" style="font-weight:600">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Bold 700</span><span class="smp cormorant" style="font-weight:700">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Italic 400</span><span class="smp cormorant" style="font-weight:400;font-style:italic">The Conscious Intelligence</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz cormorant" style="font-size:66px;font-weight:600">The Conscious Intelligence</div>
+  <div class="sz cormorant" style="font-size:40px;font-weight:500">Revolutionary Absolute Intelligence</div>
+  <div class="sz cormorant" style="font-size:26px">The Conscious Intelligence</div>
+  <div class="para cormorant" style="font-size:19px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. Does this honour natural intelligence? 0123456789</div>
+  <div class="para cormorant" style="font-size:15px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. 0123456789</div>
+</section>
 
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Sora</span><span class="note">geometric sans</span></div><div class="disp sora" style="font-size:36px;font-weight:600">The Conscious Intelligence</div><div class="bd sora" style="font-weight:300">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
+<!-- SPECTRAL -->
+<section class="font">
+  <div class="fhead"><span class="nm spectral" style="font-size:30px;font-weight:600">Spectral</span><span class="meta">300–700 + italic</span></div>
+  <div class="block-label">Weights</div>
+  <div class="wt"><span class="tag">Light 300</span><span class="smp spectral" style="font-weight:300">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Regular 400</span><span class="smp spectral" style="font-weight:400">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Medium 500</span><span class="smp spectral" style="font-weight:500">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">SemiBold 600</span><span class="smp spectral" style="font-weight:600">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Bold 700</span><span class="smp spectral" style="font-weight:700">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Italic 400</span><span class="smp spectral" style="font-weight:400;font-style:italic">The Conscious Intelligence</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz spectral" style="font-size:60px;font-weight:600">The Conscious Intelligence</div>
+  <div class="sz spectral" style="font-size:38px;font-weight:500">Revolutionary Absolute Intelligence</div>
+  <div class="sz spectral" style="font-size:26px">The Conscious Intelligence</div>
+  <div class="para spectral" style="font-size:18px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. Does this honour natural intelligence? 0123456789</div>
+  <div class="para spectral" style="font-size:14px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. 0123456789</div>
+</section>
 
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Cormorant Garamond</span><span class="note">high-contrast Garamond</span></div><div class="disp cormorant" style="font-size:46px;font-weight:600">The Conscious Intelligence</div><div class="bd cormorant">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
+<!-- LIBRE CASLON TEXT -->
+<section class="font">
+  <div class="fhead"><span class="nm caslon" style="font-size:30px">Libre Caslon Text</span><span class="meta">400 · italic · 700</span></div>
+  <div class="block-label">Weights</div>
+  <div class="wt"><span class="tag">Regular 400</span><span class="smp caslon" style="font-weight:400">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Italic 400</span><span class="smp caslon" style="font-weight:400;font-style:italic">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Bold 700</span><span class="smp caslon" style="font-weight:700">The Conscious Intelligence</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz caslon" style="font-size:56px">The Conscious Intelligence</div>
+  <div class="sz caslon" style="font-size:34px">Revolutionary Absolute Intelligence</div>
+  <div class="sz caslon" style="font-size:24px">The Conscious Intelligence</div>
+  <div class="para caslon" style="font-size:18px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. Does this honour natural intelligence? 0123456789</div>
+  <div class="para caslon" style="font-size:14px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. 0123456789</div>
+</section>
 
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Fraunces</span><span class="note">old-style with character</span></div><div class="disp fraunces" style="font-size:42px;font-weight:600">The Conscious Intelligence</div><div class="bd fraunces">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
+<!-- FRAUNCES -->
+<section class="font">
+  <div class="fhead"><span class="nm fraunces" style="font-size:30px;font-weight:600">Fraunces</span><span class="meta">300–700 + italic · variable old-style</span></div>
+  <div class="block-label">Weights</div>
+  <div class="wt"><span class="tag">Light 300</span><span class="smp fraunces" style="font-weight:300">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Regular 400</span><span class="smp fraunces" style="font-weight:400">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Medium 500</span><span class="smp fraunces" style="font-weight:500">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">SemiBold 600</span><span class="smp fraunces" style="font-weight:600">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Bold 700</span><span class="smp fraunces" style="font-weight:700">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Italic 400</span><span class="smp fraunces" style="font-weight:400;font-style:italic">The Conscious Intelligence</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz fraunces" style="font-size:60px;font-weight:600">The Conscious Intelligence</div>
+  <div class="sz fraunces" style="font-size:38px;font-weight:500">Revolutionary Absolute Intelligence</div>
+  <div class="sz fraunces" style="font-size:26px">The Conscious Intelligence</div>
+  <div class="para fraunces" style="font-size:18px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. Does this honour natural intelligence? 0123456789</div>
+  <div class="para fraunces" style="font-size:14px">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. 0123456789</div>
+</section>
 
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Libre Caslon Text</span><span class="note">Caslon book serif</span></div><div class="disp caslon" style="font-size:40px">The Conscious Intelligence</div><div class="bd caslon">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
+<!-- SORA -->
+<section class="font">
+  <div class="fhead"><span class="nm sora" style="font-size:28px;font-weight:600">Sora</span><span class="meta">200–800</span></div>
+  <div class="block-label">Weights</div>
+  <div class="wt"><span class="tag">Light 300</span><span class="smp sora" style="font-weight:300">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Regular 400</span><span class="smp sora" style="font-weight:400">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Medium 500</span><span class="smp sora" style="font-weight:500">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">SemiBold 600</span><span class="smp sora" style="font-weight:600">The Conscious Intelligence</span></div>
+  <div class="wt"><span class="tag">Bold 700</span><span class="smp sora" style="font-weight:700">The Conscious Intelligence</span></div>
+  <div class="block-label">Sizes</div>
+  <div class="sz sora" style="font-size:54px;font-weight:600">The Conscious Intelligence</div>
+  <div class="sz sora" style="font-size:34px;font-weight:500">Revolutionary Absolute Intelligence</div>
+  <div class="sz sora" style="font-size:24px;font-weight:400">The Conscious Intelligence</div>
+  <div class="para sora" style="font-size:16px;font-weight:300">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. Does this honour natural intelligence? 0123456789</div>
+  <div class="para sora" style="font-size:13px;font-weight:400">RAI builds consciousness-first technology — tools that extend human capacity rather than replace it. 0123456789</div>
+</section>
 
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Goudy Bookletter 1911</span><span class="note">warm old-style</span></div><div class="disp goudy" style="font-size:40px">The Conscious Intelligence</div><div class="bd goudy">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
-
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Sedan</span><span class="note">quiet old-style serif</span></div><div class="disp sedan" style="font-size:40px">The Conscious Intelligence</div><div class="bd sedan">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
-
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">GFS Didot</span><span class="note">high-contrast Didone</span></div><div class="disp didot" style="font-size:42px">The Conscious Intelligence</div><div class="bd didot">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
-
-  <div class="cand"><input type="checkbox"><div><div class="nmrow"><span class="nm">Forum</span><span class="note">Roman / inscriptional</span></div><div class="disp forum" style="font-size:44px">The Conscious Intelligence</div><div class="bd forum">RAI extends human capacity rather than replacing it — innovation within cosmic order. 0123456789</div></div></div>
-
-</div>
-
-<div class="foot">
-  <div class="callout"><b>Note —</b> Devanagari (Jaini Purva) and Hindi (Linotype Devanagari, via Adobe kit) are final. Linotype renders true on this hosted page; all English options are Google Fonts and render everywhere.</div>
-  <div class="signoff">
-    <div class="box"><div class="k">English — display</div><div class="line"></div></div>
-    <div class="box"><div class="k">English — body</div><div class="line"></div></div>
-    <div class="box"><div class="k">Approved by / date</div><div class="line"></div></div>
-  </div>
-</div>
+<div class="callout"><b>Note —</b> Jaini Purva (sacred) and Linotype Devanagari (Hindi, via Adobe kit) are final. English candidates under review (one to be chosen): Cormorant Garamond · Spectral · Libre Caslon Text · Fraunces · Sora. Linotype renders true on this hosted page; all English faces are Google Fonts.</div>
 
 </div></body></html>
